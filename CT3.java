@@ -9,7 +9,7 @@ public class CT3 {
             System.out.print("This person has a 10% tax rate.");
         }else if (weeklyIncome >= 500 && weeklyIncome<1500) {
             System.out.print("This person has a 15% tax rate.");
-        }else if (weeklyIncome>=1500 && weeklyIncome<2500 ) {
+        }else if (weeklyIncome>=1500 && weeklyIncome<2500 )  {
             System.out.print("This person has a 20% tax rate.");
         }else{
             System.out.print("This person has a 30% tax rate.");
