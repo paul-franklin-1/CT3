@@ -9,7 +9,7 @@ public class CT3 {
             System.out.print("This person has a 10% tax witholding rate.")};
             else if (500<weeklyIncome) and (weeklyIncome<1500);{
                 System.out.print("This person has a 15% tax witholding rate.");}
-        d
+        dasdf
 
 
 
