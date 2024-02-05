@@ -37,7 +37,8 @@ public class CT4 {
         System.out.println("Maximum investment: $" + maxInvestment);
         System.out.println("Interest (at 20%) from investments: $" + interestInvestment + "\n");
         System.out.println("Have a nice day!");
-    }}
+    }
+}
 
 
 
