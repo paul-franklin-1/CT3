@@ -13,7 +13,7 @@ public class CT4 {
         int i = 0;
         float g = 0;
         float newInvestment = 1.0f;
-        System.out.println("Decimal places are optional when entering investment amounts.");
+        System.out.println("Decimal places are optional when entering investment amounts.\n");
         while(i<=9){
             System.out.println("Enter numeric value of Investment #" + (i+1) + ": ");
             newInvestment = scnr.nextFloat();
@@ -33,7 +33,7 @@ public class CT4 {
         System.out.println("Sum of investments: " + sumInvestments);
         System.out.println("Average investment: " + meanInvestments);
         System.out.println("Minimum investment: " + minInvestment);
-        System.out.println("Maximum investment: " + minInvestment);
+        System.out.println("Maximum investment: " + maxInvestment);
         System.out.println("20% interest from investments: " + interestInvestment);
         System.out.println("Have a nice day!");
     }}
