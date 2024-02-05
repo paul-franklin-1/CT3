@@ -14,13 +14,13 @@ public class CT4 {
         float g = 0;
         float newInvestment = 1.0f;
         while(i<=9){
-            System.out.println("Enter value of Investment #" + (i+1) + "  with two decimal places: ");
+            System.out.println("Enter numeric value of Investment #" + (i+1) + ": (decimal places optional)");
             newInvestment = scnr.nextFloat();
             listInvestments.add(newInvestment);
             g = g + newInvestment;
             i++;
         }
-        float countInvestments = listInvestments.size();
+        int countInvestments = listInvestments.size();
         float sumInvestments = g;
         float meanInvestments = sumInvestments / countInvestments;
         Collections.sort(listInvestments);
