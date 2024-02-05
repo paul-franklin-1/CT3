@@ -13,8 +13,9 @@ public class CT4 {
         int i = 0;
         float g = 0;
         float newInvestment = 1.0f;
+        System.out.println("Decimal places are optional when entering investment amounts.");
         while(i<=9){
-            System.out.println("Enter numeric value of Investment #" + (i+1) + ": (decimal places optional)");
+            System.out.println("Enter numeric value of Investment #" + (i+1) + ": ");
             newInvestment = scnr.nextFloat();
             listInvestments.add(newInvestment);
             g = g + newInvestment;
