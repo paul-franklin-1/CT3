@@ -29,13 +29,12 @@ public class CT4 {
         float maxInvestment = (float) listInvestments.get(9);
         float interestInvestment = (float) (sumInvestments * .2);
 
-        System.out.println("Your investments: $" + listInvestments);
-        System.out.println("Number of investments: " + countInvestments);
-        System.out.println("Sum of investments: $" + sumInvestments);
-        System.out.println("Average investment: $" + meanInvestments);
-        System.out.println("Minimum investment: $" + minInvestment);
-        System.out.println("Maximum investment: $" + maxInvestment);
-        System.out.println("Interest (at 20%) from investments: $" + interestInvestment + "\n");
+        String.format("Number of investments: $%.2f\n",countInvestments);
+        String.format("Sum of investments: $%.2f\n", sumInvestments);
+        String.format("Average investment: $%.2f\n",meanInvestments);
+        String.format("Minimum investment: $%.2f\n",minInvestment);
+        String.format("Maximum investment: $%.2f\n",maxInvestment);
+        String.format("Interest (at 20%%) from investments: $%.2f\n", interestInvestment);
         System.out.println("Have a nice day!");
     }
 }
