@@ -29,15 +29,14 @@ public class CT4 {
         float minInvestment = (float) listInvestments.get(0);
         float maxInvestment = (float) listInvestments.get(9);
         float interestInvestment = (float) (sumInvestments * .2);
-        System.out.print("Your investments: ");
+        System.out.print("Your investments: {");
         int p = 0;
         while (p<10){
-            float invest =  (float) listInvestments.get(0);
-            System.out.print(String.format("$%.2f, ", invest));
+            float invest =  (float) listInvestments.get(p);
+            System.out.print(String.format(" $%.2f", invest));
             ++p;
         }
-
-
+        System.out.println(" }");
         String str1 = String.format("Number of investments: %d\n",countInvestments);
         String str2 = String.format("Sum of investments: $%.2f\n", sumInvestments);
         String str3 = String.format("Average investment: $%.2f\n",meanInvestments);
