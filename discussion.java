@@ -17,16 +17,16 @@ public class discussion {
         int personalBest = (int) (personalBestSecondsMilli);
         if (personalBest >= elGuerroujRecord) {
             System.out.println("Your time of " + personalBestMileTime + " is not faster than the world record. " +
-                    "It's time to start training!");
+                    "It's time to start training...");
         } else {
             System.out.print("Your time is faster than the world record! Time to retire.");
             System.exit(0);
         }
         int monthCount = 0;
 
-        while ((monthCount < 18) && (personalBest >= elGuerroujRecord)) {
+        while ((monthCount < 3) && (personalBest >= elGuerroujRecord)) {
             monthCount++;
-            System.out.println("Training and race complete for month " + monthCount + "? Enter 1 for Yes, 2 for No:");
+            System.out.println("Training and race complete for month " + monthCount + "?\nEnter 1 for Yes, 2 for No:");
             int trainingBinary = scnr.nextInt();
             if (trainingBinary == 1) {
                 System.out.println("Enter this month's race time:");
@@ -35,17 +35,19 @@ public class discussion {
                 float rawNewRaceMinutesMilli = Float.parseFloat(rawNewRaceTime.substring(2, 6));
                 int convertNewRaceTime = (int) (rawNewRaceMinutes * 60) + (int) (rawNewRaceMinutesMilli);
                 if (convertNewRaceTime >= elGuerroujRecord) {
-                    System.out.println("Your new time did not break the record. Do you want to move on to month " + (monthCount+1) + " and run race  " + (monthCount+1) + "?");
+                    System.out.println("Your new time did not break the record. Proceeding to month " + (monthCount+1) + "...");
                 }
                 else {
                     System.out.print("You broke the record! Congratulations! Time to retire.");
                     break;}}
             else if (trainingBinary == 2){
-                {System.out.println("You have quit your pursuit of your goal. Please try again.");
+                System.out.println("You have quit your pursuit of your goal. Enjoy your retirement!");
                   break;}}
+        System.out.print("You have reached your 3 month time limit. Time to retire.");
+    }
 
 
 
 
 
-    }}}
+    }
