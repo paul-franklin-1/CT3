@@ -43,5 +43,7 @@ public class discussion {
             else if (trainingBinary == 2){
                 System.out.println("You have quit your pursuit of your goal. Time to retire.");
                   break;}}
-        System.out.print("You have reached your 18-month time limit. Time to retire.");
+        if (monthCount <18){
+            ;}
+        else{System.out.print("You have reached your 18-month time limit. Time to retire.");}
     }}
