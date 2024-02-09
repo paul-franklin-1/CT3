@@ -24,7 +24,7 @@ public class discussion {
         }
         int monthCount = 0;
 
-        while ((monthCount < 3) && (personalBest >= elGuerroujRecord)) {
+        while ((monthCount < 18) && (personalBest >= elGuerroujRecord)) {
             monthCount++;
             System.out.println("Training and race complete for month " + monthCount + "?\nEnter 1 for Yes, 2 for No:");
             int trainingBinary = scnr.nextInt();
@@ -41,13 +41,7 @@ public class discussion {
                     System.out.print("You broke the record! Congratulations! Time to retire.");
                     break;}}
             else if (trainingBinary == 2){
-                System.out.println("You have quit your pursuit of your goal. Enjoy your retirement!");
+                System.out.println("You have quit your pursuit of your goal. Time to retire.");
                   break;}}
-        System.out.print("You have reached your 3 month time limit. Time to retire.");
-    }
-
-
-
-
-
-    }
+        System.out.print("You have reached your 18-month time limit. Time to retire.");
+    }}
