@@ -49,16 +49,18 @@ public class CT5 {
         double annualMax = monthlyAvgUSACopy[11];
 
         //user enters month by typing month's name, program outputs temp avg for that month as a double
+        int j = 1
+        while (j>0){
         System.out.println("For country USA in year 2022, please enter month to get average nationwide temperature " +
                 "for that month\nTo exit, enter \"Exit\"");
         String userMonth = scnr.nextLine();
-        while (!(userMonth.equals("Exit"))){
         if (userMonth.equals("year") || userMonth.equals("Year")){
             System.out.println("Annual Average 2022: " + annualAvg + " degrees F");
             System.out.println("Maximum Average Temperature: " + annualMax + "degrees F, " +  months2022[11]);
             System.out.println("Minimum Average Temperature: " + annualMin + "degrees F, " +  months2022[0]);
             for(int i=0; i<12; ++i){
-                System.out.print(monthlyAvgUSA[i] + " degrees F, " + months2022[i]);}}
+                System.out.print(monthlyAvgUSA[i] + " degrees F, " + months2022[i]);
+            continue}}
         else if (userMonth.equals("January") || userMonth.equals("February") || userMonth.equals("March") || userMonth.equals("April")
                     || userMonth.equals("May") || userMonth.equals("June") || userMonth.equals("July") || userMonth.equals("August")
                     || userMonth.equals("September") || userMonth.equals("October")
@@ -67,6 +69,9 @@ public class CT5 {
             double monthTemp = monthlyAvgUSA[monthIndex];
             System.out.println("Average temperature for " + userMonth + ": " + monthTemp);
             continue;}
+        else if (userMonth.equals("Exit"){
+            System.out.println("Goodbye");
+            j = 0;}
         else{ System.out.println("Error, please try again");
             continue;}}
         System.out.print("Goodbye");
