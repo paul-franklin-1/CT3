@@ -50,8 +50,9 @@ public class CT5 {
 
         //user enters month by typing month's name, program outputs temp avg for that month as a double
         while (true){
-        System.out.println("For USA in 2022, please enter month to get average nationwide temperature " +
-                "for that month:\n(to exit, enter \"Exit\")");
+        System.out.println("For USA in 2022, please enter a month to get average nationwide temperature " +
+                "for that month.\nTo view all monthly averages, the annual average, and the maximum and minimum " +
+                "monthly averages, enter \"Year\".\n(to exit, enter \"Exit\")");
         String userMonth = scnr.nextLine();
         if (userMonth.equals("year") || userMonth.equals("Year")){
             System.out.println("Annual Average Temperature 2022: " + annualAvg + " degrees F");
