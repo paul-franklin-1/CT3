@@ -44,8 +44,10 @@ public class CT5 {
         double sumAvg = stream.sum();
         double countAvg = stream2.count();
         double annualAvg = sumAvg / countAvg;
-        double annualau
-        System.out.println(annualAvg);
-        System.out.println("For country USA in year 2022, please enter month to get average nationwide temperature for that month:");
-        userMonth = scnr.nextLine();
+        Arrays.sort(monthlyAvgUSA);
+        double annualMax = monthlyAvgUSA[0];
+        double annualMin = monthlyAvgUSA[11];
+        System.out.println(sumAvg + " " + countAvg + " " + annualAvg + " " + annualMax + " " + annualMin);
+        //System.out.println("For country USA in year 2022, please enter month to get average nationwide temperature for that month:");
+        //userMonth = scnr.nextLine();
     }}
