@@ -8,7 +8,6 @@ public class CT5 {
         Scanner scnr = new Scanner(System.in);
         double[] monthlyAvgUSA = new double[12];
         String[] months2022 = new String[12];
-        String userMonth;
 
         monthlyAvgUSA[0] = 35.13;
         monthlyAvgUSA[1] = 36.52;
@@ -39,15 +38,17 @@ public class CT5 {
 
         DoubleStream stream = DoubleStream.of(monthlyAvgUSA);
         DoubleStream stream2 = DoubleStream.of(monthlyAvgUSA);
-        DoubleStream stream3 = DoubleStream.of(monthlyAvgUSA);
-        DoubleStream stream4 = DoubleStream.of(monthlyAvgUSA);
         double sumAvg = stream.sum();
         double countAvg = stream2.count();
         double annualAvg = sumAvg / countAvg;
-        Arrays.sort(monthlyAvgUSA);
-        double annualMax = monthlyAvgUSA[0];
-        double annualMin = monthlyAvgUSA[11];
-        System.out.println(sumAvg + " " + countAvg + " " + annualAvg + " " + annualMax + " " + annualMin);
-        //System.out.println("For country USA in year 2022, please enter month to get average nationwide temperature for that month:");
-        //userMonth = scnr.nextLine();
+        double[] monthlyAvgUSACopy = monthlyAvgUSA.clone();
+        Arrays.sort(monthlyAvgUSACopy);
+        double annualMax = monthlyAvgUSACopy[0];
+        double annualMin = monthlyAvgUSACopy[11];
+        //System.out.println(sumAvg + " " + countAvg + " " + annualAvg + " " + annualMax + " " + annualMin);
+        System.out.println("For country USA in year 2022, please enter month to get average nationwide temperature for that month:");
+        String userMonth = scnr.nextLine();
+        int monthIndex = Arrays.asList(months2022).lastIndexOf(userMonth);
+        double monthTemp = monthlyAvgUSA[monthIndex];
+        System.out.println("Average temperature for " + userMonth + ": " + monthTemp);
     }}
