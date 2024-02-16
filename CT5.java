@@ -2,14 +2,15 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.util.stream.*;
 import java.util.stream.DoubleStream;
-
 public class CT5 {
     public static void main(String[] args) {
         Scanner scnr = new Scanner(System.in);
+
+        //create arrays
         double[] monthlyAvgUSA = new double[12];
         String[] months2022 = new String[12];
 
-        //create first array
+        //fill first array
         monthlyAvgUSA[0] = 35.13;
         monthlyAvgUSA[1] = 36.52;
         monthlyAvgUSA[2] = 44.08;
@@ -23,7 +24,7 @@ public class CT5 {
         monthlyAvgUSA[10] = 40.89;
         monthlyAvgUSA[11] = 33.06;
 
-        //create second array
+        //fill second array
         months2022[0] = "January";
         months2022[1] = "February";
         months2022[2] = "March";
@@ -37,7 +38,7 @@ public class CT5 {
         months2022[10] = "November";
         months2022[11] = "December";
 
-        //Calculate sum, count, average, min and max from months2022
+        //in advance, calculate sum, count, average, min and max from months2022
         DoubleStream stream = DoubleStream.of(monthlyAvgUSA);
         DoubleStream stream2 = DoubleStream.of(monthlyAvgUSA);
         double sumAvg = stream.sum();
@@ -48,7 +49,7 @@ public class CT5 {
         double annualMin = monthlyAvgUSACopy[0];
         double annualMax = monthlyAvgUSACopy[11];
 
-        //display prompt, user provides input
+        //user input
         while (true){
         System.out.println("For USA in 2022, please enter a month to get average nationwide temperature " +
                 "for that month.\nTo view all monthly averages, the annual average, and the maximum and minimum " +
@@ -66,13 +67,12 @@ public class CT5 {
             continue;}
 
         //second branch: all months
-        else if (userMonth.equals("year") || userMonth.equals("Year")){
+        else if (userMonth.equals("Year")){
             System.out.println("Annual Average Temperature 2022: " + annualAvg + " degrees F");
             System.out.println("Maximum Average Temperature: " + annualMax + " degrees F, " +  months2022[11]);
             System.out.println("Minimum Average Temperature: " + annualMin + " degrees F, " +  months2022[0]);
             for(int i=0; i<12; ++i){
-                System.out.println(months2022[i] + ": " + monthlyAvgUSA[i] + " degrees F");
-            continue;}}
+                System.out.println(months2022[i] + ": " + monthlyAvgUSA[i] + " degrees F");}}
 
         //third branch: exit program
         else if (userMonth.equals("Exit")){
