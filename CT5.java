@@ -9,7 +9,7 @@ public class CT5 {
         double[] monthlyAvgUSA = new double[12];
         String[] months2022 = new String[12];
 
-        //add monthly temperature averages (USA, 2022) to new array
+        //create first array
         monthlyAvgUSA[0] = 35.13;
         monthlyAvgUSA[1] = 36.52;
         monthlyAvgUSA[2] = 44.08;
@@ -23,7 +23,7 @@ public class CT5 {
         monthlyAvgUSA[10] = 40.89;
         monthlyAvgUSA[11] = 33.06;
 
-        //add month strings to new array
+        //create second array
         months2022[0] = "January";
         months2022[1] = "February";
         months2022[2] = "March";
@@ -37,7 +37,7 @@ public class CT5 {
         months2022[10] = "November";
         months2022[11] = "December";
 
-        //Calculate the sum, count, average, min and max from the above temperature array
+        //Calculate sum, count, average, min and max from months2022
         DoubleStream stream = DoubleStream.of(monthlyAvgUSA);
         DoubleStream stream2 = DoubleStream.of(monthlyAvgUSA);
         double sumAvg = stream.sum();
@@ -48,30 +48,40 @@ public class CT5 {
         double annualMin = monthlyAvgUSACopy[0];
         double annualMax = monthlyAvgUSACopy[11];
 
-        //user enters month by typing month's name, program outputs temp avg for that month as a double
+        //display prompt, user provides input
         while (true){
         System.out.println("For USA in 2022, please enter a month to get average nationwide temperature " +
                 "for that month.\nTo view all monthly averages, the annual average, and the maximum and minimum " +
                 "monthly averages, enter \"Year\".\n(to exit, enter \"Exit\")");
         String userMonth = scnr.nextLine();
-        if (userMonth.equals("year") || userMonth.equals("Year")){
+
+        //first branch: single month
+        if (userMonth.equals("January") || userMonth.equals("February") || userMonth.equals("March") || userMonth.equals("April")
+                || userMonth.equals("May") || userMonth.equals("June") || userMonth.equals("July") || userMonth.equals("August")
+                || userMonth.equals("September") || userMonth.equals("October")
+                ||userMonth.equals("November") || userMonth.equals("December")){
+            int monthIndex = Arrays.asList(months2022).lastIndexOf(userMonth);
+            double monthTemp = monthlyAvgUSA[monthIndex];
+            System.out.println("Average temperature for " + userMonth + ": " + monthTemp);
+            continue;}
+
+        //second branch: all months
+        else if (userMonth.equals("year") || userMonth.equals("Year")){
             System.out.println("Annual Average Temperature 2022: " + annualAvg + " degrees F");
             System.out.println("Maximum Average Temperature: " + annualMax + " degrees F, " +  months2022[11]);
             System.out.println("Minimum Average Temperature: " + annualMin + " degrees F, " +  months2022[0]);
             for(int i=0; i<12; ++i){
                 System.out.println(months2022[i] + ": " + monthlyAvgUSA[i] + " degrees F");
             continue;}}
-        else if (userMonth.equals("January") || userMonth.equals("February") || userMonth.equals("March") || userMonth.equals("April")
-                    || userMonth.equals("May") || userMonth.equals("June") || userMonth.equals("July") || userMonth.equals("August")
-                    || userMonth.equals("September") || userMonth.equals("October")
-                    ||userMonth.equals("November") || userMonth.equals("December")){
-            int monthIndex = Arrays.asList(months2022).lastIndexOf(userMonth);
-            double monthTemp = monthlyAvgUSA[monthIndex];
-            System.out.println("Average temperature for " + userMonth + ": " + monthTemp);
-            continue;}
+
+        //third branch: exit program
         else if (userMonth.equals("Exit")){
             break;}
+
+        //fourth branch: invalid input
         else{System.out.println("Error, please try again");
             continue;}}
+
+        //end of program
         System.out.print("Goodbye");
     }}
