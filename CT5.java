@@ -57,20 +57,27 @@ public class CT5 {
         String userMonth = scnr.nextLine();
 
         //first branch: single month
-        if (userMonth.equals("January") || userMonth.equals("February") || userMonth.equals("March") || userMonth.equals("April")
-                || userMonth.equals("May") || userMonth.equals("June") || userMonth.equals("July") || userMonth.equals("August")
-                || userMonth.equals("September") || userMonth.equals("October")
-                ||userMonth.equals("November") || userMonth.equals("December")){
+        if     (userMonth.equals("January") ||
+                userMonth.equals("February") ||
+                userMonth.equals("March") ||
+                userMonth.equals("April") ||
+                userMonth.equals("May") ||
+                userMonth.equals("June") ||
+                userMonth.equals("July") ||
+                userMonth.equals("August")||
+                userMonth.equals("September") ||
+                userMonth.equals("October")||
+                userMonth.equals("November") ||
+                userMonth.equals("December")){
             int monthIndex = Arrays.asList(months2022).lastIndexOf(userMonth);
             double monthTemp = monthlyAvgUSA[monthIndex];
-            System.out.println("Average temperature for " + userMonth + ": " + monthTemp);
-            continue;}
+            System.out.println("Average temperature for " + userMonth + ": " + monthTemp);}
 
         //second branch: all months
         else if (userMonth.equals("Year")){
             System.out.println("Annual Average Temperature 2022: " + annualAvg + " degrees F");
-            System.out.println("Maximum Average Temperature: " + annualMax + " degrees F, " +  months2022[11]);
-            System.out.println("Minimum Average Temperature: " + annualMin + " degrees F, " +  months2022[0]);
+            System.out.println("Maximum Average Monthly Temperature: " + annualMax + " degrees F, " +  months2022[11]);
+            System.out.println("Minimum Average Monthly Temperature: " + annualMin + " degrees F, " +  months2022[0]);
             for(int i=0; i<12; ++i){
                 System.out.println(months2022[i] + ": " + monthlyAvgUSA[i] + " degrees F");}}
 
@@ -79,8 +86,7 @@ public class CT5 {
             break;}
 
         //fourth branch: invalid input
-        else{System.out.println("Error, please try again");
-            continue;}}
+        else{System.out.println("Error, please try again");}}
 
         //end of program
         System.out.print("Goodbye");
