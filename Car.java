@@ -7,7 +7,7 @@ class Car {
     private String color;
     private int year;
     private int mileage;
-    public int serialNumber = 0;
+    public int serialNumber = 1;
 
     public Car(){};
 
@@ -17,19 +17,9 @@ class Car {
         this.color = color;
         this.year = year;
         this.mileage = mileage;
-        this.serialNumber = ++serialNumber;
+        this.serialNumber = serialNumber;
+        serialNumber++;
     }}
-public class CarInventory {
-    private ArrayList<Car> inventory;
-    private int serialNumber = 0;
-
-    public CarInventory() {
-        inventory = new ArrayList<>();
-    }
-    public void addCar(Car car) {
-        inventory.add(car);
-    }}
-
 
 
 
