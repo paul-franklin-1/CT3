@@ -28,16 +28,20 @@ public class Main {
                 case 2:
                     System.out.println("Enter serial number: ");
                     serialNumber = scnr.nextInt();
-
+                    inventory.removeCar(serialNumber);
                     break;
                 case 3:
-                    update car info
+                    System.out.println("Enter serial number: ");
+                    serialNumber = scnr.nextInt();
+                    inventory.updateCar(serialNumber);
                     break;
                 case 4:
-                    Get car information
+                    System.out.println("Enter serial number: ");
+                    serialNumber = scnr.nextInt();
+                    inventory.getCarInfo(serialNumber);
                     break;
                 case 5:
-                    display entire inventory
+                    inventory.printCars()
                 case 6:
                     loopVariable = false;
                     break;

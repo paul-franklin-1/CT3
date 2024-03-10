@@ -16,6 +16,9 @@ public class CarInventory {
     public void updateCar(Car car);
         inventory.replaceAll(serialNumber);
 
+    public String getCarInfo(Car car)
+        return inventory[serialNumber];
+
     public String printCars();
         for(int i = 0;i<inventory.size();i++){
             System.out.println(inventory[i]);
