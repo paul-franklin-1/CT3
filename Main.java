@@ -6,14 +6,29 @@ public class Main {
         int optionChoice;
         boolean loopVariable = true;
         while(loopVariable){
-            System.out.println("Choose option: \n 1. Add new car \n 2. Remove car \n 3. Update car info \n Get car information");
+            System.out.println("Choose option: \n 1. Add new car \n 2. Remove car \n 3. Update car info \n Get car information \n Display all cars \n Quit");
             optionChoice = scnr.nextInt();
             switch (optionChoice) {
                 case 1:
-                    addcar;
+                    CarInventory inventory = new CarInventory();
+                    System.out.print("Enter make: ");
+                    String make = scnr.next();
+                    System.out.print("Enter model: ");
+                    String model = scnr.next();
+                    System.out.print("Enter color: ");
+                    String color = scnr.next();
+                    System.out.print("Enter year: ");
+                    int year = scnr.nextInt();
+                    System.out.println("Enter mileage: ");
+                    int mileage = scnr.nextInt();
+                    System.out.println("Enter serial number: ");
+                    int serialNumber = scnr.nextInt();
+                    inventory.addCar(new Car(make, model, color, year, mileage, serialNumber));
                     break;
                 case 2:
-                    remove car;
+                    System.out.println("Enter serial number: ");
+                    serialNumber = scnr.nextInt();
+
                     break;
                 case 3:
                     update car info

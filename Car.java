@@ -7,7 +7,7 @@ class Car {
     private String color;
     private int year;
     private int mileage;
-    public int serialNumber = 1;
+    private int serialNumber;
 
     public Car(){};
 
@@ -18,7 +18,6 @@ class Car {
         this.year = year;
         this.mileage = mileage;
         this.serialNumber = serialNumber;
-        serialNumber++;
     }}
 
 
